@@ -3,6 +3,9 @@
   extends: [
     'config:recommended',
   ],
+  baseBranches: [
+    "develop"
+  ],
   packageRules: [
     // KSP is tightly coupled to Kotlin version.
     {
