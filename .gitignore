@@ -22,9 +22,9 @@ build/
 /.idea/artifacts
 /.idea/shelf
 /.idea/runConfigurations.xml
-/.idea/kotlinc.xml
 /.idea/migrations.xml
 /.idea/modules
+/.idea/inspectionProfiles/Project_Default.xml
 
 .idea/.name
 .DS_Store
