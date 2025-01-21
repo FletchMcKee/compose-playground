@@ -6,12 +6,12 @@ plugins {
 
 android {
     namespace = "com.fletchmckee.composeplayground"
-    compileSdk = 34
+    compileSdk = libs.versions.targetSdk.get().toInt()
 
     defaultConfig {
         applicationId = "com.fletchmckee.composeplayground"
         minSdk = 26
-        targetSdk = 34
+        targetSdk = libs.versions.targetSdk.get().toInt()
         versionCode = 1
         versionName = "1.0"
 

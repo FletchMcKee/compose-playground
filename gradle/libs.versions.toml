@@ -1,4 +1,5 @@
 [versions]
+targetSdk = "34"
 agp = "8.8.0"
 kotlin = "2.1.0"
 coreKtx = "1.15.0"
