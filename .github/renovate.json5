@@ -3,10 +3,7 @@
   extends: [
     'config:recommended',
   ],
-  baseBranches: [
-    "develop"
-  ],
-  "schedule": [
+  schedule: [
     "before 6am"
   ],
   packageRules: [
@@ -19,8 +16,8 @@
       ],
     },
     {
-      "matchUpdateTypes": ["major"],
-      "dependencyDashboardApproval": true
+      matchUpdateTypes: ["major"],
+      dependencyDashboardApproval: true
     },
   ],
 }
