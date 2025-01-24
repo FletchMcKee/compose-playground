@@ -15,9 +15,5 @@
         'com.google.devtools.ksp{/,}**',
       ],
     },
-    {
-      matchUpdateTypes: ["major"],
-      dependencyDashboardApproval: true
-    },
   ],
 }
