@@ -3,8 +3,8 @@
   extends: [
     'config:recommended',
   ],
-  baseBranches: [
-    "develop"
+  schedule: [
+    "before 6am"
   ],
   packageRules: [
     // KSP is tightly coupled to Kotlin version.
@@ -14,6 +14,10 @@
         'org.jetbrains.kotlin:kotlin{/,}**',
         'com.google.devtools.ksp{/,}**',
       ],
+    },
+    {
+      matchUpdateTypes: ["major"],
+      dependencyDashboardApproval: true
     },
   ],
 }

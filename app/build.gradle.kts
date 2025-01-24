@@ -6,12 +6,12 @@ plugins {
 
 android {
     namespace = "com.fletchmckee.composeplayground"
-    compileSdk = 34
+    compileSdk = libs.versions.compileSdk.get().toInt()
 
     defaultConfig {
         applicationId = "com.fletchmckee.composeplayground"
         minSdk = 26
-        targetSdk = 34
+        targetSdk = libs.versions.compileSdk.get().toInt()
         versionCode = 1
         versionName = "1.0"
 
@@ -51,6 +51,8 @@ dependencies {
     implementation(libs.androidx.material3)
 
     testImplementation(libs.junit)
+    testImplementation(libs.kotlin.test)
+    testImplementation(libs.assertk)
 
     androidTestImplementation(libs.androidx.junit)
     androidTestImplementation(libs.androidx.espresso.core)
