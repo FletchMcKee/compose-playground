@@ -20,9 +20,9 @@ class LeetCodeTest {
     val nums = intArrayOf(5, 6, 7, 8, 9, 10)
     val target = 8
 
-    val expected = intArrayOf(4, 4)
+    val expected = intArrayOf(3, 3)
     val actual = searchRange(nums, target)
-    assertThat(actual).isEqualTo(expected)
+    assertThat(actual.toString()).isEqualTo(expected.toString())
   }
 
   private fun searchRange(
