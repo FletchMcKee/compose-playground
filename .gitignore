@@ -25,6 +25,7 @@ build/
 /.idea/migrations.xml
 /.idea/modules
 /.idea/inspectionProfiles/
+/.idea/vcs.xml
 
 .idea/.name
 .DS_Store
