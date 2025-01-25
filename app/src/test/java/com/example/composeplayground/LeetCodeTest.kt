@@ -22,7 +22,7 @@ class LeetCodeTest {
 
     val expected = intArrayOf(3, 3)
     val actual = searchRange(nums, target)
-    assertThat(actual.toString()).isEqualTo(expected.toString())
+    assertThat(actual).isEqualTo(expected)
   }
 
   private fun searchRange(
