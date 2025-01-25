@@ -1,4 +1,4 @@
-package com.fletchmckee.composeplayground.common.ui
+package com.fletchmckee.composeplayground.common.ui.compose
 
 import androidx.compose.foundation.layout.fillMaxWidth
 import androidx.compose.foundation.layout.padding
@@ -18,15 +18,17 @@ import androidx.compose.runtime.mutableStateOf
 import androidx.compose.runtime.remember
 import androidx.compose.runtime.setValue
 import androidx.compose.ui.Modifier
+import androidx.compose.ui.res.stringResource
 import androidx.compose.ui.text.input.TextFieldValue
 import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
+import com.fletchmckee.composeplayground.common.R
 
 @Composable
 fun SearchTextField(
     searchText: TextFieldValue = TextFieldValue(),
-    hint: String = "Search...",
-    modifier: Modifier = Modifier.fillMaxWidth().padding(5.dp),
+    hint: String = stringResource(R.string.search_hint),
+    modifier: Modifier = Modifier,
     onSearchTextChange: (TextFieldValue) -> Unit,
     keyboardOptions: KeyboardOptions = KeyboardOptions.Default,
     keyboardActions: KeyboardActions = KeyboardActions(),
@@ -52,7 +54,7 @@ fun SearchTextField(
                 ) {
                     Icon(
                         imageVector = Icons.Default.Clear,
-                        contentDescription = "Clear text",
+                        contentDescription = stringResource(R.string.clear_text),
                     )
                 }
             }
