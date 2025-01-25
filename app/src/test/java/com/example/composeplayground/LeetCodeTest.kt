@@ -15,6 +15,16 @@ class LeetCodeTest {
     assertThat(actual).isEqualTo(expected)
   }
 
+  @Test
+  fun `Find First and Last Position of Element in Sorted Array - 2`() {
+    val nums = intArrayOf(5, 6, 7, 8, 9, 10)
+    val target = 8
+
+    val expected = intArrayOf(4, 4)
+    val actual = searchRange(nums, target)
+    assertThat(actual).isEqualTo(expected)
+  }
+
   private fun searchRange(
     nums: IntArray,
     target: Int,

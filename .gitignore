@@ -5,29 +5,7 @@
 build/
 .kotlin/
 
-/.idea/workspace.xml
-/.idea/misc.xml
-/.idea/libraries
-/.idea/caches
-/.idea/navEditor.xml
-/.idea/tasks.xml
-/.idea/modules.xml
-/.idea/other.xml
-/.idea/compiler.xml
-/.idea/jarRepositories.xml
-/.idea/deploymentTargetDropDown.xml
-/.idea/deploymentTargetSelector.xml
-/.idea/androidTestResultsUserPreferences.xml
-/.idea/appInsightsSettings.xml
-/.idea/artifacts
-/.idea/shelf
-/.idea/runConfigurations.xml
-/.idea/migrations.xml
-/.idea/modules
-/.idea/inspectionProfiles/
-/.idea/vcs.xml
-/.idea/gradle.xml
-/.idea/kotlinc.xml
+/.idea
 
 .idea/.name
 .DS_Store
