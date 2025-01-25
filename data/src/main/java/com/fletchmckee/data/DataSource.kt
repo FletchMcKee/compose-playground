@@ -1,4 +1,3 @@
 package com.fletchmckee.data
 
-class DataSource {
-}
+class DataSource
