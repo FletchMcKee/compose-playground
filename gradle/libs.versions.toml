@@ -18,6 +18,7 @@ assertk = "0.28.1"
 sqlDelight = "2.0.2"
 appcompat = "1.6.1"
 material = "1.10.0"
+spotless = "7.0.0"
 
 [libraries]
 androidx-core-ktx = { group = "androidx.core", name = "core-ktx", version.ref = "coreKtx" }
@@ -38,6 +39,10 @@ kotlinx-datetime = { group = "org.jetbrains.kotlinx", name = "kotlinx-datetime",
 google-maps = { group = "com.google.android.gms", name = "play-services-maps", version.ref = "googleMaps" }
 sqldelight-sqlite = { group = "app.cash.sqldelight", name = "sqlite-driver", version.ref = "sqlDelight"}
 
+# Lint - These aren't implemented directly but instead through Spotless. However setting it up this way allows renovate to detect updates.
+ktlint-cli = "com.pinterest.ktlint:ktlint-cli:1.5.0"
+ktlint-compose-rules = "io.nlopez.compose.rules:ktlint:0.4.22"
+
 kotlin-test = { group = "org.jetbrains.kotlin", name = "kotlin-test", version.ref = "kotlin" }
 assertk = { group = "com.willowtreeapps.assertk", name = "assertk", version.ref = "assertk" }
 androidx-appcompat = { group = "androidx.appcompat", name = "appcompat", version.ref = "appcompat" }
@@ -51,4 +56,4 @@ kotlin-android = { id = "org.jetbrains.kotlin.android", version.ref = "kotlin" }
 kotlin-compose = { id = "org.jetbrains.kotlin.plugin.compose", version.ref = "kotlin" }
 jetbrains-kotlin-jvm = { id = "org.jetbrains.kotlin.jvm", version.ref = "jetbrainsKotlinJvm" }
 android-library = { id = "com.android.library", version.ref = "agp" }
-
+spotless = { id = "com.diffplug.spotless", version.ref = "spotless" }

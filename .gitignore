@@ -26,6 +26,8 @@ build/
 /.idea/modules
 /.idea/inspectionProfiles/
 /.idea/vcs.xml
+/.idea/gradle.xml
+/.idea/kotlinc.xml
 
 .idea/.name
 .DS_Store
