@@ -13,7 +13,11 @@ subprojects {
   configure<com.diffplug.gradle.spotless.SpotlessExtension> {
     kotlin {
       target("src/**/*.kt")
-      ktlint(libs.ktlint.cli.get().version).editorConfigOverride(
+      ktlint(
+        libs.ktlint.cli
+          .get()
+          .version,
+      ).editorConfigOverride(
         mapOf(
           "ktlint_standard_function-expression-body" to "disabled",
           "ktlint_standard_filename" to "disabled",
@@ -22,14 +26,20 @@ subprojects {
         ),
       ).customRuleSets(
         listOf(
-          libs.ktlint.compose.rules.get().toString()
-        )
+          libs.ktlint.compose.rules
+            .get()
+            .toString(),
+        ),
       )
     }
 
     kotlinGradle {
-      target("src/**/*.kts")
-      ktlint(libs.ktlint.cli.get().version)
+      target("*.kts")
+      ktlint(
+        libs.ktlint.cli
+          .get()
+          .version,
+      )
     }
   }
 }

@@ -10,15 +10,18 @@ junitVersion = "1.2.1"
 espressoCore = "3.6.1"
 lifecycleRuntimeKtx = "2.8.7"
 activityCompose = "1.10.0"
+composeUi = "1.7.6"
 composeBom = "2025.01.00"
 jetbrainsKotlinJvm = "2.1.0"
 kotlinxDatetime = "0.6.1"
 googleMaps = "19.0.0"
 assertk = "0.28.1"
 sqlDelight = "2.0.2"
-appcompat = "1.6.1"
-material = "1.10.0"
+appCompat = "1.6.1"
 spotless = "7.0.0"
+
+testCoreKtx = "1.6.1"
+testRunner = "1.6.2"
 
 [libraries]
 androidx-core-ktx = { group = "androidx.core", name = "core-ktx", version.ref = "coreKtx" }
@@ -35,6 +38,8 @@ androidx-ui-tooling-preview = { group = "androidx.compose.ui", name = "ui-toolin
 androidx-ui-test-manifest = { group = "androidx.compose.ui", name = "ui-test-manifest" }
 androidx-ui-test-junit4 = { group = "androidx.compose.ui", name = "ui-test-junit4" }
 androidx-material3 = { group = "androidx.compose.material3", name = "material3" }
+androidx-appcompat = { group = "androidx.appcompat", name = "appcompat", version.ref = "appCompat" }
+
 kotlinx-datetime = { group = "org.jetbrains.kotlinx", name = "kotlinx-datetime", version.ref = "kotlinxDatetime" }
 google-maps = { group = "com.google.android.gms", name = "play-services-maps", version.ref = "googleMaps" }
 sqldelight-sqlite = { group = "app.cash.sqldelight", name = "sqlite-driver", version.ref = "sqlDelight"}
@@ -43,10 +48,15 @@ sqldelight-sqlite = { group = "app.cash.sqldelight", name = "sqlite-driver", ver
 ktlint-cli = "com.pinterest.ktlint:ktlint-cli:1.5.0"
 ktlint-compose-rules = "io.nlopez.compose.rules:ktlint:0.4.22"
 
+# Test
 kotlin-test = { group = "org.jetbrains.kotlin", name = "kotlin-test", version.ref = "kotlin" }
 assertk = { group = "com.willowtreeapps.assertk", name = "assertk", version.ref = "assertk" }
-androidx-appcompat = { group = "androidx.appcompat", name = "appcompat", version.ref = "appcompat" }
-material = { group = "com.google.android.material", name = "material", version.ref = "material" }
+compose-ui-test-junit4 = { group = "androidx.compose.ui", name = "ui-test-junit4", version.ref = "composeUi" }
+compose-ui-test-manifest = { group = "androidx.compose.ui", name = "ui-test-manifest", version.ref = "composeUi" }
+androidx-test-core = { group = "androidx.test", name = "core-ktx", version.ref = "testCoreKtx" }
+androidx-test-runner = { group = "androidx.test", name = "runner", version.ref = "testRunner"}
+androidx-test-uiautomator = "androidx.test.uiautomator:uiautomator:2.3.0"
+
 ui-tooling = { module = "androidx.compose.ui:ui-tooling" }
 ui-tooling-preview = { module = "androidx.compose.ui:ui-tooling-preview" }
 

@@ -18,18 +18,21 @@ import androidx.compose.runtime.mutableStateOf
 import androidx.compose.runtime.remember
 import androidx.compose.runtime.setValue
 import androidx.compose.ui.Modifier
+import androidx.compose.ui.platform.testTag
 import androidx.compose.ui.res.stringResource
 import androidx.compose.ui.text.input.TextFieldValue
 import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
 import com.fletchmckee.composeplayground.common.R
 
+const val SEARCH_TEXT_FIELD_TAG = "searchTextField"
+
 @Composable
 fun SearchTextField(
   searchText: TextFieldValue,
   hint: String,
   onSearchTextChange: (TextFieldValue) -> Unit,
-  modifier: Modifier = Modifier,
+  modifier: Modifier = Modifier.testTag(SEARCH_TEXT_FIELD_TAG),
   keyboardOptions: KeyboardOptions = KeyboardOptions.Default,
   keyboardActions: KeyboardActions = KeyboardActions(),
   onClear: () -> Unit = { onSearchTextChange(TextFieldValue()) },
