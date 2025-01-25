@@ -15,7 +15,7 @@ jetbrainsKotlinJvm = "2.1.0"
 kotlinxDatetime = "0.6.1"
 googleMaps = "19.0.0"
 assertk = "0.28.1"
-sqlDelight = "2.0.0"
+sqlDelight = "2.0.2"
 appcompat = "1.6.1"
 material = "1.10.0"
 
