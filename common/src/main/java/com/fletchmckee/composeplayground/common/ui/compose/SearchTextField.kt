@@ -26,61 +26,62 @@ import com.fletchmckee.composeplayground.common.R
 
 @Composable
 fun SearchTextField(
-    searchText: TextFieldValue = TextFieldValue(),
-    hint: String = stringResource(R.string.search_hint),
-    modifier: Modifier = Modifier,
-    onSearchTextChange: (TextFieldValue) -> Unit,
-    keyboardOptions: KeyboardOptions = KeyboardOptions.Default,
-    keyboardActions: KeyboardActions = KeyboardActions(),
-    onClear: () -> Unit = { onSearchTextChange(TextFieldValue()) }
+  searchText: TextFieldValue,
+  hint: String,
+  onSearchTextChange: (TextFieldValue) -> Unit,
+  modifier: Modifier = Modifier,
+  keyboardOptions: KeyboardOptions = KeyboardOptions.Default,
+  keyboardActions: KeyboardActions = KeyboardActions(),
+  onClear: () -> Unit = { onSearchTextChange(TextFieldValue()) },
 ) {
-    OutlinedTextField(
-        value = searchText,
-        onValueChange = onSearchTextChange,
-        placeholder = { Text(text = hint) },
-        leadingIcon = {
-            Icon(
-                imageVector = Icons.Default.Search,
-                // Decorative.
-                contentDescription = null,
-            )
-        },
-        trailingIcon = {
-            if (searchText.text.isNotBlank()) {
-                IconButton(
-                    onClick = {
-                        onClear()
-                    },
-                ) {
-                    Icon(
-                        imageVector = Icons.Default.Clear,
-                        contentDescription = stringResource(R.string.clear_text),
-                    )
-                }
-            }
-        },
-        maxLines = 1,
-        singleLine = true,
-        keyboardOptions = keyboardOptions,
-        keyboardActions = keyboardActions,
-        modifier = modifier,
-    )
+  OutlinedTextField(
+    value = searchText,
+    onValueChange = onSearchTextChange,
+    placeholder = { Text(text = hint) },
+    leadingIcon = {
+      Icon(
+        imageVector = Icons.Default.Search,
+        // Decorative.
+        contentDescription = null,
+      )
+    },
+    trailingIcon = {
+      if (searchText.text.isNotBlank()) {
+        IconButton(
+          onClick = {
+            onClear()
+          },
+        ) {
+          Icon(
+            imageVector = Icons.Default.Clear,
+            contentDescription = stringResource(R.string.clear_text),
+          )
+        }
+      }
+    },
+    maxLines = 1,
+    singleLine = true,
+    keyboardOptions = keyboardOptions,
+    keyboardActions = keyboardActions,
+    modifier = modifier,
+  )
 }
 
 @Preview
 @Composable
 private fun SearchTextFieldPreview() {
-    MaterialTheme {
-        var searchQuery by remember { mutableStateOf(TextFieldValue("")) }
-        SearchTextField(
-            searchText = searchQuery,
-            modifier = Modifier
-                .fillMaxWidth()
-                .padding(5.dp),
-            onSearchTextChange = {
-                searchQuery = it
-                println(searchQuery.text)
-            }
-        )
-    }
+  MaterialTheme {
+    var searchQuery by remember { mutableStateOf(TextFieldValue("")) }
+    SearchTextField(
+      searchText = searchQuery,
+      hint = stringResource(R.string.search_hint),
+      modifier = Modifier
+        .fillMaxWidth()
+        .padding(5.dp),
+      onSearchTextChange = {
+        searchQuery = it
+        println(searchQuery.text)
+      },
+    )
+  }
 }
