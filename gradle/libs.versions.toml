@@ -17,7 +17,7 @@ kotlinxDatetime = "0.6.1"
 googleMaps = "19.0.0"
 assertk = "0.28.1"
 sqlDelight = "2.0.2"
-appCompat = "1.6.1"
+appCompat = "1.7.0"
 spotless = "7.0.0"
 
 testCoreKtx = "1.6.1"
