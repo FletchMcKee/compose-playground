@@ -1,0 +1,17 @@
+name: TODO Issues
+
+on:
+  push:
+    branches: [ "trunk" ]
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Create TODO Issues
+      - uses: alstr/todo-to-issue-action@v5
+      
