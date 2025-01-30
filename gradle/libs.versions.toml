@@ -20,8 +20,12 @@ sqlDelight = "2.0.2"
 appCompat = "1.7.0"
 spotless = "7.0.2"
 
+apollo = "4.1.0"
+
 testCoreKtx = "1.6.1"
 testRunner = "1.6.2"
+kotlinxCoroutinesTest = "1.7.3"
+material = "1.12.0"
 
 [libraries]
 androidx-core-ktx = { group = "androidx.core", name = "core-ktx", version.ref = "coreKtx" }
@@ -43,13 +47,19 @@ androidx-appcompat = { group = "androidx.appcompat", name = "appcompat", version
 kotlinx-datetime = { group = "org.jetbrains.kotlinx", name = "kotlinx-datetime", version.ref = "kotlinxDatetime" }
 google-maps = { group = "com.google.android.gms", name = "play-services-maps", version.ref = "googleMaps" }
 sqldelight-sqlite = { group = "app.cash.sqldelight", name = "sqlite-driver", version.ref = "sqlDelight"}
+sqldelight-android = { group = "app.cash.sqldelight", name = "android-driver", version.ref = "sqlDelight"}
 
 # Lint - These aren't implemented directly but instead through Spotless. However setting it up this way allows renovate to detect updates.
 ktlint-cli = "com.pinterest.ktlint:ktlint-cli:1.5.0"
 ktlint-compose-rules = "io.nlopez.compose.rules:ktlint:0.4.22"
 
+# Database and Network
+apollo-runtime = { group = "com.apollographql.apollo", name = "apollo-runtime", version.ref = "apollo" }
+apollo-normalized-cache = { group = "com.apollographql.apollo", name = "apollo-normalized-cache", version.ref = "apollo" }
+
 # Test
 kotlin-test = { group = "org.jetbrains.kotlin", name = "kotlin-test", version.ref = "kotlin" }
+kotlinx-coroutines-test = { module = "org.jetbrains.kotlinx:kotlinx-coroutines-test", version.ref = "kotlinxCoroutinesTest" }
 assertk = { group = "com.willowtreeapps.assertk", name = "assertk", version.ref = "assertk" }
 compose-ui-test-junit4 = { group = "androidx.compose.ui", name = "ui-test-junit4", version.ref = "composeUi" }
 compose-ui-test-manifest = { group = "androidx.compose.ui", name = "ui-test-manifest", version.ref = "composeUi" }
@@ -59,6 +69,7 @@ androidx-test-uiautomator = "androidx.test.uiautomator:uiautomator:2.3.0"
 
 ui-tooling = { module = "androidx.compose.ui:ui-tooling" }
 ui-tooling-preview = { module = "androidx.compose.ui:ui-tooling-preview" }
+material = { group = "com.google.android.material", name = "material", version.ref = "material" }
 
 [plugins]
 android-application = { id = "com.android.application", version.ref = "agp" }
@@ -67,3 +78,6 @@ kotlin-compose = { id = "org.jetbrains.kotlin.plugin.compose", version.ref = "ko
 jetbrains-kotlin-jvm = { id = "org.jetbrains.kotlin.jvm", version.ref = "jetbrainsKotlinJvm" }
 android-library = { id = "com.android.library", version.ref = "agp" }
 spotless = { id = "com.diffplug.spotless", version.ref = "spotless" }
+apollo = { id = "com.apollographql.apollo", version.ref = "apollo" }
+sqldelight = { id = "app.cash.sqldelight", version.ref = "sqlDelight" }
+

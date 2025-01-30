@@ -19,7 +19,7 @@ class SearchTextFieldTest {
     composeTestRule.setContent {
       MaterialTheme {
         SearchTextField(
-          searchText = TextFieldValue(),
+          searchQuery = TextFieldValue(),
           hint = "",
           onSearchTextChange = { },
         )
@@ -35,7 +35,7 @@ class SearchTextFieldTest {
     composeTestRule.setContent {
       MaterialTheme {
         SearchTextField(
-          searchText = TextFieldValue("C"),
+          searchQuery = TextFieldValue("C"),
           hint = "",
           onSearchTextChange = { },
         )

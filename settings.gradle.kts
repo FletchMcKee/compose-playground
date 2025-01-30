@@ -11,6 +11,7 @@ pluginManagement {
         gradlePluginPortal()
     }
 }
+@Suppress("UnstableApiUsage")
 dependencyResolutionManagement {
     repositoriesMode.set(RepositoriesMode.FAIL_ON_PROJECT_REPOS)
     repositories {
@@ -22,4 +23,5 @@ dependencyResolutionManagement {
 rootProject.name = "Compose Playground"
 include(":app")
 include(":data")
-include(":common")
+include(":common:ui")
+include(":common:util")
