@@ -55,8 +55,6 @@ apollo {
     introspection {
       endpointUrl.set("https://connect.squareupsandbox.com/public/graphql")
       schemaFile.set(file("src/main/graphql/schema.graphqls"))
-      val accessToken = providers.gradleProperty("SQUARE_SANDBOX_ACCESS_TOKEN").get()
-      headers.put("Authorization", "Bearer $accessToken")
     }
   }
 }
