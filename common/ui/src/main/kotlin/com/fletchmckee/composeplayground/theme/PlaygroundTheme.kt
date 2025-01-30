@@ -20,6 +20,7 @@ val LightPlaygroundColorScheme = lightColorScheme(
   tertiary = Lilac,
 )
 
+// TODO: Add more darkColorScheme colors.
 val DarkPlaygroundColorScheme = darkColorScheme(
   primary = Violet,
   onPrimary = Color.Black,
