@@ -7,10 +7,16 @@ plugins {
 
 android {
   namespace = "com.fletchmckee.composeplayground.data"
-  compileSdk = libs.versions.compileSdk.get().toInt()
+  compileSdk =
+    libs.versions.compileSdk
+      .get()
+      .toInt()
 
   defaultConfig {
-    minSdk = libs.versions.minSdk.get().toInt()
+    minSdk =
+      libs.versions.minSdk
+        .get()
+        .toInt()
   }
 
   compileOptions {
@@ -24,7 +30,10 @@ android {
 
   @Suppress("UnstableApiUsage")
   testOptions {
-    targetSdk = libs.versions.compileSdk.get().toInt()
+    targetSdk =
+      libs.versions.compileSdk
+        .get()
+        .toInt()
   }
 }
 

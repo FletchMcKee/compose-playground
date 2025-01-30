@@ -25,7 +25,7 @@ val DarkPlaygroundColorScheme = darkColorScheme(
   onPrimary = Color.Black,
   secondary = Umbra,
   onSecondary = Color.Black,
-  tertiary = Lilac
+  tertiary = Lilac,
 )
 
 @Composable

@@ -78,7 +78,7 @@ fun SearchTextField(
     keyboardActions = KeyboardActions(
       onSearch = {
         keyboardController?.hide()
-      }
+      },
     ),
     colors = OutlinedTextFieldDefaults.colors(
 

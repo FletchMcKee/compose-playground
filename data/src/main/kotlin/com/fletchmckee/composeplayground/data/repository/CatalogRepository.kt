@@ -6,9 +6,7 @@ interface CatalogRepository {
   suspend fun getCatalog(): Result<Unit>
 }
 
-class CatalogRepositoryImpl: CatalogRepository {
+class CatalogRepositoryImpl : CatalogRepository {
   override suspend fun getCatalog(): Result<Unit> = suspendRunCatching {
-
   }
 }
-
